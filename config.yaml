@@ -1,7 +1,8 @@
-baseURL: "https://example.com"
+baseURL: "https://blog.stephenajulu.com"
 languageCode: "en-us"
-title: "Hugo Novela"
+title: "Ajulu's Thoughts"
 pygmentsstyle: 'monokai'
+paginate: "10"
 
 # Theme settings
 # theme: novela
@@ -18,3 +19,30 @@ social:
   youtube: "#"
 taxonomies:
   author: authors
+ outputs:
+  home:
+    - "html"
+    - "rss"
+    - "jsonfeed"
+  section:
+    - "html"
+    - "rss"
+    - "jsonfeed"
+  taxonomy:
+    - "html"
+    - "rss"
+    - "jsonfeed"
+  taxonomyTerm:
+    - "html"
+    - "rss"
+    - "jsonfeed"
+
+outputFormats:
+  jsonfeed:
+    mediaType: "application/json"
+    baseName: "feed"
+    isPlainText: true   
+  rss:
+    mediaType: "application/rss+xml"
+    baseName: "feed"
+    isPlainText: true

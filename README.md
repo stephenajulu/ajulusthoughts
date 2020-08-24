@@ -1,3 +1,36 @@
+[![Ajulu's Blog Netlify Status](https://api.netlify.com/api/v1/badges/7de87fa1-0073-49c0-91ff-fa37601db926/deploy-status)](https://app.netlify.com/sites/ajulusthoughts1/deploys)
+
+# My Name is Stephen Ajulu and This is the Source Code of my Blog: https://blog.stephenajulu.com
+
+I am currently using Hugo Novela ported by Forestry.io from Narative's Gatbsy Version.
+
+I have customized it to my linking and will continue to do so until i achieve my version of perfection.
+
+Currently am planning to copy posts from my official blog https://ajulusthoughts.wordpress.com 
+
+For those interested in my version go ahead and fork this. I am still working on it and have about 7 things to do.
+
+I have and will contine to document my process in both my blogs, on medium, dev.to and syndicate to to other blogs.
+
+The reason i chose static is because of it's speed and security. As of this day (5th April 2020) PageSpeed Desktop Score was 100 while mobile was 99.
+I am yet to implement a csr but if you fork it please do. 
+
+If you do fork this make sure your image formats are in .webp and do a gtmetrics.com scan one of the post with the largest image(1920x1080 or 1900x600), if they say resize/scale take that no {the size you should implement} and do that for the rest of the images eg for mine the image was 1600x900 they told me to resize it to 675x600 so i resized all the images to 875x800) Why do this to make the blog faster.
+
+I also implemented a service worker, icons and manifest file so you'll need to change that, feel free to use https://pwastarter.love2dev.com it takes less than 5 minutes and you'll have all the htings you need to make the website a progressive web application meaining it will work offline.
+
+For more info kindly chech the series on both blogs.
+
+Also note i added comments through utterances. It uses github issues as a comment base.
+
+
+### For More Info Visit My 2 Blogs https://ajulusthoughts.wordpress.com and https://blog.stephenajulu.com
+
+
+
+
+# Default Readme
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8fd7da5f-0c4d-4a43-9e23-2d1baf0d35cc/deploy-status)](https://app.netlify.com/sites/hugo-novela-forestry/deploys)
 
 # Hugo Novela Forestry Starter
