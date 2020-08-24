@@ -2,14 +2,13 @@ baseURL: "https://blog.stephenajulu.com"
 languageCode: "en-us"
 title: "Ajulu's Thoughts"
 pygmentsstyle: 'monokai'
-paginate: "10"
 
 # Theme settings
 # theme: novela
 module:
   imports:
     - path: "github.com/forestryio/hugo-theme-novela"
-paginate: 6
+paginate: 10
 social:
   twitter: "#"
   github: "#"
@@ -19,7 +18,8 @@ social:
   youtube: "#"
 taxonomies:
   author: authors
- outputs:
+  
+outputs:
   home:
     - "html"
     - "rss"
