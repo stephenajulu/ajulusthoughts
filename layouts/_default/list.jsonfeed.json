@@ -1,0 +1,31 @@
+{{- $pctx := . -}}
+{{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
+{{- $pages := $pctx.RegularPages -}}
+{{- $limit := .Site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 -}}
+{{- $pages = $pages | first $limit -}}
+{{- end -}}
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "{{ .Site.Title }}",
+	"description": "Ajulu's Blog is a Place Where You Can Get Informative Tech, Cybersecurity, Dev, Blockchain and Other Related Content",
+    "home_page_url": "{{ .Permalink}}",
+    "feed_url": "{{ .Permalink }}feed.json",
+	"author": {
+		"name": "Stephen Ajulu",
+		"url": "https://blog.stephenajulu.com/authors/stephen-ajulu/"
+    },
+    "items": [
+        {{ range $index, $pages := $pages }}
+        {{ if ge $index 1 }}, {{end}}{
+            "id": "{{ .Permalink }}",
+            "url": "{{ .Permalink }}",
+            "title": {{ .Title | jsonify }},
+            "content_html": {{ .Content | jsonify }},
+            "summary": {{ .Summary | jsonify }},
+            "date_published": {{ dateFormat "2006-01-02T15:04:05-07:00" .Date | jsonify }},
+            "date_modified": {{ dateFormat "2006-01-02T15:04:05-07:00" .Lastmod | jsonify }}
+        }
+        {{ end }}
+    ]
+}
